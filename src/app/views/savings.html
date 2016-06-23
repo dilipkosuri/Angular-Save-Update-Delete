@@ -1,0 +1,22 @@
+<table id="savingsHtml">
+    <tr ng-repeat="item in savingsMain">
+        <td class="content_parent">
+            <table class="mytable" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th colspan="2">
+                        <span class="th-left">{{item.account_type}}</span>
+                        <button class="th-right" ng-click="deleteDataFromSharedService(item.account_type, item.date)">X</button>
+                    </th>
+                </tr>
+                <tr>
+                    <td rowspan="2">{{item.amount}}</td>
+                    <td>{{item.date}}</td>
+                </tr>
+                <tr>
+                    <td>{{item.maturity}}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+</table>

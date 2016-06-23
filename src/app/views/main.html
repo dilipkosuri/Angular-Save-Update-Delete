@@ -1,0 +1,51 @@
+<form ng-controller="MainController">
+  <div class="page-header">
+    <h1>Angular-Save-Update-Delete</h1>
+  </div>
+  <div class="content-wrapper">
+    <div class="sidebar">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <button ng-click="setAccountType('allAccounts')" ng-model="allAccounts" class="ng-pristine ng-untouched ng-valid ng-empty">All</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button ng-click="setAccountType('savingsAccounts')" ng-model="savingsMain" class="ng-pristine ng-valid ng-not-empty ng-touched">Savings</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button ng-click="setAccountType('checkingAccounts')" ng-model="checkingsMain" class="ng-pristine ng-untouched ng-valid ng-not-empty">Checkings</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="create-account-btn-class" 
+              type="button" 
+              ng-dialog="app/views/create-account-template.html" 
+              ng-dialog-data="" 
+              ng-dialog-class="ngdialog-theme-default" 
+              ng-dialog-scope="this" 
+              plain=false
+              showClose=true
+              closeByDocument=true
+              closeByEscape=true
+              ng-dialog-show-close="false">New Account</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="right-content">
+      <div id="savingsTemplate" templateurl="app/views/savings.html" ng-show="showSavings" include-template=""></div>
+      <div id="checkingsTemplate" templateurl="app/views/checkings.html" ng-show="showCheckings" include-template=""></div>
+
+    </div>
+  </div>
+
+
+</form>

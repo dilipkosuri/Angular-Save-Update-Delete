@@ -1,0 +1,21 @@
+<table id="checkingsHtml">
+	<tr ng-repeat="item in checkingsMain">
+		<td class="content_parent">
+			<table class="mytable" cellpadding="0" cellspacing="0">
+				<tr>
+					<th colspan="2">
+						<span class="th-left">{{item.account_type}}</span>
+						<button class="th-right" ng-click="deleteDataFromSharedService(item.account_type, item.bic)">X</button></th>
+				</tr>
+				<tr>
+					<td rowspan="2">{{item.amount}}</td>
+					<td>{{item.bic}}</td>
+				</tr>
+				<tr>
+					<td>{{item.iban}}</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+</table>
